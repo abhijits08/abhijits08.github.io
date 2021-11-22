@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Abhijit Singh - Projects</title>
+        <link rel="stylesheet" href="website_styling.css">
+    </head>
+
+    <body>
+
+        <header class="site_header">
+            <!--Name and navigation links perhaps-->
+            <div class="wrapper">
+
+                <a class="site_title" href="Home.html">Abhijit Singh</a>
+
+                <nav class="site_nav">
+
+                    <div class="trigger">
+                        <ul class="menu">
+                            <li><a class="page_link" href="Outreach.html">Outreach</a></li>
+                            <li><a class="page_link" href="Coursework.html">Coursework</a></li>
+                            <li><a class="page_link" href="Code.html">Code</a></li>
+                            <li><a class="page_link_current" href="Projects.html">Projects</a></li>
+                            <li><a class="page_link" href="Home.html">Home</a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+
+        <div class="projects_content">
+            <!--Main text here-->
+            <h1>Projects</h1>
+
+            <p>These are a selection of machine learning research projects I've undertaken at <a href="https://nus.edu.sg/" target="_blank">NUS</a> and <a href="https://www.ed.ac.uk/" target="_blank">University of Edinburgh</a>.</p>
+
+            <ul>
+                <li><button type="button" class="collapsible"><strong>Adversarial Attack for Deep Learning based IoT Appliance Classification Techniques</strong></button>
+                    <div class="content">
+                        <p>Developed a white-box attack mechanism to generate adversarial examples for data obtained from smart meters installed in residential houses, and demonstrated that their statistical properties are indistinguishable from those of the true datapoints. 100% of these adversarial examples were able to successfully fool the deep learning based appliance classification models. Won the second prize at the best student paper competition at the WF-IoT Conference, 2021.</p>
+                    </div>
+                </li>
+
+                <li><button type="button" class="collapsible"><strong>Comparing ML Frameworks and Investigating the Effectiveness of MoS language model</strong></button>
+                    <div class="content">
+                        <p>For my MSc thesis, I worked with senior ML researchers from Amazon to identify strengths and weaknesses of popular deep learning frameworks. Wrote the code to implement the state-of-the-art language modelling technique at this time, Mixture of Softmaxes (MoS), to analyze and compare these frameworks, as well as investigate the effectiveness of the MoS language model. This work filled a gap in the literature, and aided the Amazon ML-research team in making future design choices.</p>
+                    </div>
+                </li>
+
+                <li><button type="button" class="collapsible"><strong>Deep Learning based Classification of News Articles</strong></button>
+                    <div class="content">
+                        <p>This project involved using a novel dataset of 250,000 articles from 'The Guardian' newspaper, and classifying them under 11 different newspaper sections (such as politics, sport, travel). We pre-processed these articles, and experimented with various Recurrent Neural Network (RNN) models. The final architecture leveraged deep bi-directional LSTMs to achieve an accuracy of over 91% on the held-out test set.</p>
+                    </div>
+                </li>
+
+                <li><button type="button" class="collapsible"><strong>Inferring skill-level of Go players</strong></button>
+                    <div class="content">
+                        <p>Used a dataset of over 50,000 professional Go game results (kindly provided by <a href="https://Go4Go.net" target="_blank">Go4Go.net</a>) as well as some AlphaGo match results, to find out what the available data suggested the relative skill of AlphaGo was compared to the best human players. Then we used the resulting model to predict the results of future games. Among other things, we implemented Gaussian-prior models and used Approximate Inference to compute posterior marginal skill densities of specific players.</p>
+                    </div>
+                </li>
+
+                <li><button type="button" class="collapsible"><strong>Exploration of Deep Learning Architectures in Computer Vision</strong></button>
+                    <div class="content">
+                        <p>Experimented with different Deep Learning architectures on the MNIST dataset to learn more about their behaviour and nature. Implemented all the forward and back-propagation functions on my own. Extended this work by performing a deeper analysis on the EMNIST dataset, and implementing Convolutional Neural Networks (CNNs) and Batch Normalization from scratch. The accuracy on the held-out EMNIST test set was 86%.</p>
+                    </div>
+                </li>
+
+                <li><button type="button" class="collapsible"><strong>Predicting onset of Acute Kidney Injury</strong></button>
+                    <div class="content">
+                        <p>Used the MIMIC-III dataset, which comprised of de-identified health-related hourly time-series data of over 40,000 patients who stayed in the ICU at an Israeli hospital. We experimented with suitable time-series pre-processing methods, and developed Deep Learning models for predicting the onset of Acute Kidney Injury (AKI) in a patient at any point in time. We used CNNs and LSTMs to achieve an Area Under ROC Curve (AUC) of 0.98.</p>
+                    </div>
+                </li>
+
+                <li><button type="button" class="collapsible"><strong>Identification of Potential Customers</strong></button>
+                    <div class="content">
+                        <p>Used the Coil Challenge 2000 dataset available on the UCI repository to perform extensive Exploratory Data Analysis to visualize and choose the right features to classify people as being potential buyers of a company's insurance policy. We dealt with the heavy class imbalance and used many different ML algorithms to analyze their differences, and pick the most suitable method for this task. Our final method used only 7 features (which would save future data collection costs) to achieve a competitive performance when compared to all the teams that submitted their solutions during the original challenge.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--Javascript code for collapsible function-->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
+
+        <footer>
+            <!--May or may not need this later-->
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,134 @@
+/* BEGIN: Top menu bar*/
+
+div.wrapper a.site_title, ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #319a7e; /*Colour for top menu bar*/
+}
+
+div.wrapper a.site_title {
+  float: left;
+}
+
+ul.menu li {
+  float: right;
+}
+
+div.wrapper a.site_title, li a.page_link, li a.page_link_current {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0.8em 0.8em;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+div.wrapper a.site_title:hover, li a.page_link:hover, li a.page_link_current:hover {
+  background-color: #0b3329; /*Colour for hover area*/
+}
+
+a.site_title, a.page_link, a.page_link_current {
+    font-size: 1.5em
+}
+
+a.page_link_current {
+    background-color: #0b3329; /*Colour for current tab*/
+}
+
+/* END: Top menu bar*/
+
+/* To centre the body text, and limit it to a max width. If screen size is lesser, then it will take full screen.*/
+body {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.home_content, .projects_content, .code_content, .coursework_content, .outreach_content {
+    padding: 1em;
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: Times New Roman, Garamond, serif;
+    background-color: #e8e5e5;/*efe4e4, f3eeee, f7be849e*/ /*Colour for body background*/
+}
+
+h1 {
+    margin: 0.5em 0em;
+}
+
+img.display_photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%; /*Makes the image circular*/
+    max-width: 30%;
+    max-height: 30%;
+}
+
+/*Adds space between list items*/
+.projects_content ul li {
+    margin: 1em 0;
+}
+
+.code_content ul li, .coursework_content ul li {
+    margin: 0.4em 0;
+}
+
+/* BEGIN: Collapsible section styling*/
+
+.collapsible {
+  background-color: #86c18d6e; /*c1acac, debcbd, bbcde4*/ /*Colour for collapsible area*/
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+}
+
+button.collapsible::after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.collapsible.active::after {
+    content: '\2212';
+}
+
+.active, .collapsible:hover {
+  background-color: #62a56af0; /*e69090, 376cafba*/ /*Colour for collapsible hover area*/
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #2db1d84f; /*f1f1f1*/ /*Colour for collapsible expanded text*/
+}
+
+/* END: Collapsible section styling*/
+
+/*Styling for Footer*/
+
+footer {
+  display: block;
+  color: white;
+  padding: 0.001em;
+  text-align: center;
+  text-decoration: none;
+  background-color: #319a7e;
+}
+
+/*Colour of hyper-links in the main text*/
+
+.outreach_content a:visited, .coursework_content a:visited, .code_content a:visited, .projects_content a:visited, .home_content a:visited {
+    color: blue;
+}
+
+.outreach_content a:hover, .coursework_content a:hover, .code_content a:hover, .projects_content a:hover, .home_content a:hover {
+    background-color: #d2d5dc;
+}
